@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='favicon.ico') }}"/>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advertise using Chatbot</title>
+</head>
+<body>
+
+<div>
+  <img src="{{ url_for('static', filename='moon.png') }}" id="icon">
+  <table>
+    <tr>
+        <td id="text">
+            <b>SWITCH THEME</b>
+        </td>
+</table>
+</div>
+<div class="wrap-center">
+  <svg width="600" height="600" viewBox="-100 -100 200 200">
+    <circle class="minute_marker" cx="0" cy="0" r="90" pathLength="60"/>
+    <circle class="hour_marker" cx="0" cy="0" r="90" pathLength="60"/>
+
+    <g id="hour_hand">
+      <line class="hand" x1="0" x2="0" x2="0" y2="-50"/>
+      <line class="hand hand--thick" x1="0" y1="-40" x2="0" y2="-50"/>
+    </g>
+
+    <g id="minute_hand">
+      <line class="hand" x1="0" x2="0" x2="0" y2="-80"/>
+      <line class="hand hand--thick" x1="0" y1="-50" x2="0" y2="-80"/>
+    </g>
+
+    <g id="second_hand">
+      <line class="hand hand--second" x1="0" y1="35" x2="0" y2="-80"/>   
+    </g>
+
+    <circle class="center" r="2"/>
+
+  </svg>
+</div>
+
+  <script>
+      const textElement = document.getElementById("text");
+      const hoursElement = document.getElementById("hour_hand");
+      const minutesElement = document.getElementById("minute_hand");
+      const secondsElement = document.getElementById("second_hand");
+
+      function animate() {
+      const date = new Date();
+
+      const hour = date.getHours() + date.getMinutes() / 60;
+      const minute = date.getMinutes() + date.getSeconds() / 60;
+      const second = date.getSeconds() + date.getMilliseconds() / 1000;
+
+      hoursElement.setAttribute("transform", `rotate(${(360 / 12) * hour})`);
+      minutesElement.setAttribute("transform", `rotate(${(360 / 60) * minute})`);
+      secondsElement.setAttribute("transform", `rotate(${(360 / 60) * second})`);
+
+      requestAnimationFrame(animate);
+      }
+
+      requestAnimationFrame(animate);
+  </script>
+
+  <script>
+    var icon = document.getElementById("icon");
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+           icon.src ="{{ url_for('static', filename='sun.png') }}";
+            }else{
+               icon.src ="{{ url_for('static', filename='moon.png') }}";
+            } 
+        }      
+    </script>
+
+<!--chatbox-->
+
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/android/24/ffffff/computer.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">MSI Pulse GL66</h4>
+                    <p class="chatbox__description--header">I am MSI Pulse GL66, would you like to but me?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Ask Details here">
+                <button class="chatbox__send--footer send__button">Ask</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/msi.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
+
+
+
