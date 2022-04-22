@@ -1,0 +1,70 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi","Hey","How are you","Is anyone there?","Hello","Good day"],
+      "responses": ["Hey :-)","Hello, thanks for visiting","Hi there, what can I do for you?","Hi there, how can I help?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": ["See you later, thanks for visiting","Have a nice day","Bye! Come back again soon."]
+    },
+    {
+      "tag": "Ram",
+      "patterns": ["ram","how much ram you have","ram configuration","ram capicity"],
+      "responses": ["I have 16 GB of Ram expandable upto 32 GB which is running on a frequency of 3200 Mhz"]
+    },
+    {
+      "tag": "Processor",
+      "patterns": ["processor","what cpu you use","who powers you","cpu","processing unit"],
+      "responses": ["I am Powered with Intel i7 11800H which is a 8-core processor, offers a seamless performance by supporting up to 4.6 Ghz dual-core turbo frequency. because of which tou can seamlessly multitask things"]
+    },
+    {
+      "tag": "graphics",
+      "patterns": ["graphics card","gpu","graphics configuration","what gpu you use"],
+      "responses": ["It is powered by Ampere NVIDIA's 2nd gen RTX architecture which is RTX 3070 featuring RT Cores, Tensor Cores, and multiprocessors that deliver realistic ray-traced graphics as well as high-end AI features."]
+    },
+    {
+      "tag": "storage",
+      "patterns": ["storage","how much storage you have","do you have ssd","ssd"],
+      "responses": ["Yes i have 1 TB nvme m.2 SSD with one extra slot if you wish to upgrade it in future"]
+    },
+    {
+      "tag": "Harddrive",
+      "patterns": ["hdd","harddrive"],
+      "responses": ["i do not have a harddrive but you can add one if you wish"]
+    },
+    {
+      "tag": "display",
+      "patterns": ["display specification","display","resolution","refresh rate"],
+      "responses": ["My resolution is 2560 x 1440 with a 165 Hz refresh rate which is QHD DCI-P3 100% sRGB which gives you great viewing angles"]
+    },
+    {
+      "tag": "keyboard",
+      "patterns": ["keyboard specs","is your keyboard rgb","do you have rgb keyboard","backlit keyboard"],
+      "responses": ["Yes i have customisable RGB Lighting keyboard features Mystics Light for illuminated gaming experience"]
+    },
+    {
+      "tag": "about",
+      "patterns": ["short summary","details"],
+      "responses": ["I am MSI Pulse GL66 Core i7 11th Gen with 16 GB Ram and 1 TB SSD with RTX 3070"]
+    },
+    {
+      "tag": "windows",
+      "patterns": ["os","windows version"],
+      "responses": ["I currently use Windows 10 Home which is upgradable to Windows 11"]
+    },
+    {
+      "tag": "price",
+      "patterns": ["how much you cost","price","rate"],
+      "responses": ["you can buy one me @129990 INR"]
+    },
+    {
+      "tag": "store",
+      "patterns": ["where can i buy you","i want to buy one of you"],
+      "responses": ["You can buy me here - 'https://www.flipkart.com/msi-pulse-gl66-core-i7-11th-gen-16-gb-1-tb-ssd-windows-10-home-8-gb-graphics-nvidia-geforce-rtx-3070-11ugk-431in-gaming-laptop/p/itm9eaffcc31a058?pid=COMG6E8PV7JC3SMM&lid=LSTCOMG6E8PV7JC3SMMVHYKEI&marketplace=FLIPKART&q=msi+laptop&store=6bo%2Fb5g&srno=s_1_22&otracker=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_ps&fm=search-autosuggest&iid=04220a1d-812d-4962-ae81-045f00ab274c.COMG6E8PV7JC3SMM.SEARCH&ppt=sp&ppn=sp&ssid=ja1bk1l20g0000001650307497265&qH=a78e1dc0934db8a3'"]
+    }
+
+  ]
+}
