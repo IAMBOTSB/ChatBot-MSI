@@ -1,0 +1,331 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    background: var(--color);
+}
+
+*, html {
+    --primaryGradient: linear-gradient(93.12deg, var(--openbox) 0.52%,var(--openbox2) 100%);
+    --secondaryGradient: linear-gradient(268.91deg, var(--openbox) -2.14%, var(--openbox2) 99.69%);
+    --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+    --primary: #823b3b;
+    transition: all .5s ease-in-out;
+}
+
+
+.chatbox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: var(--color);
+}
+
+
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background: var(--color);
+    width: 300px;
+    height: 350px;
+    z-index: -123456;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+
+.chatbox--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all .5s ease-in-out;
+
+}
+
+
+.chatbox__button {
+    text-align: right;
+    transition: all .5s ease-in-out;
+}
+
+.send__button {
+    padding: 6px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+
+
+.chatbox__header {
+    position: sticky;
+    top: 0;
+    background: orange;
+    transition: all .5s ease-in-out;
+}
+
+
+.chatbox__messages {
+    margin-top: auto;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+    transition: all .2s ease-in-out;
+}
+
+.messages__item {
+    background: orange;
+    max-width: 60.6%;
+    width: fit-content;
+    transition: all .2s ease-in-out;
+}
+
+.messages__item--operator {
+    margin-left: auto;
+    transition: all .5s ease-in-out;
+}
+
+.messages__item--visitor {
+    margin-right: auto;
+    transition: all .5s ease-in-out;
+}
+
+
+.chatbox__footer {
+    position: sticky;
+    bottom: 0;
+    transition: all .5s ease-in-out;
+}
+
+.chatbox__support {
+    background: var(--color);
+    height: 450px;
+    width: 350px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: all .5s ease-in-out;
+}
+
+
+.chatbox__header {
+    background: var(--primaryGradient);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: var(--primaryBoxShadow);
+    transition: all .5s ease-in-out;
+}
+
+.chatbox__image--header {
+    margin-right: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.chatbox__heading--header {
+    font-size: 1.2rem;
+    color: white;
+    transition: all .5s ease-in-out;
+}
+
+.chatbox__description--header {
+    font-size: .9rem;
+    color: white;
+    transition: all .5s ease-in-out;
+}
+
+
+.chatbox__messages {
+    padding: 0 20px;
+    transition: all .2s ease-in-out;
+}
+
+.messages__item {
+    margin-top: 10px;
+    background: #db7676;
+    padding: 8px 12px;
+    max-width: 70%;
+    transition: all .2s ease-in-out;
+}
+
+.messages__item--visitor,
+.messages__item--typing {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.messages__item--operator {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: var(--primary);
+    color: white;
+    transition: all .5s ease-in-out;
+}
+
+
+.chatbox__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background: var(--secondaryGradient);
+    box-shadow: var(--secondaryBoxShadow);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.chatbox__footer input {
+    width: 80%;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 30px;
+    text-align: left;
+    background-color: var(--color);
+    transition: all .5s ease-in-out;
+}
+
+.chatbox__send--footer {
+    color: white;
+    transition: all .5s ease-in-out;
+}
+
+.chatbox__button button,
+.chatbox__button button:focus,
+.chatbox__button button:visited {
+    padding: 10px;
+    background: var(--msgbox);
+    border: none;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+/*animated clock*/
+
+body{
+  background-color:  var(--color);
+  /*margin: 0;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+}
+
+
+
+:root {
+    --color: #FFFFFF;
+    --text-color: #943838;
+    --hour-minute: #943838;
+    --hr-marker: #943838;
+    --min-marker: #e04534;
+    --second: #e04534;
+    --innercircle: #943838;
+    --outercircle: #943838;
+    --msgbox: white;
+    --openbox: #943838;
+    --openbox2: #e04534;
+    --textcolor: #000;
+}
+
+.dark-theme {
+    --color: #000;
+    --text-color: #943838;
+    --hour-minute: #e04534;
+    --hr-marker: #943838;
+    --min-marker: #e04534;
+    --second: #943838;
+    --innercircle: #e04534;
+    --outercircle: #943838;
+    --msgbox: #ff7575;
+    --openbox: #943838;
+    --openbox2: #ff7575;
+    --textcolor: #fff;
+}
+
+
+
+#text{
+    position: absolute;
+    top: 27px;
+    right:  60px;
+    color: var(--text-color);
+    transition: all .5s ease-in-out;
+}
+
+#icon {
+    width: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right:  23px;
+    transition: all .5s ease-in-out;
+}
+
+
+.hour_marker{
+  fill: transparent;
+  stroke:  var(--hr-marker);
+  stroke-width: 7;
+  stroke-dasharray: 0.2,4.8;
+  stroke-dashoffset: 0.1;
+  transition: all .5s ease-in-out;
+}
+
+.minute_marker{
+  fill: transparent;
+  stroke: var(--min-marker);
+  stroke-width: 4;
+  stroke-dasharray: 0.2,0.8;
+  stroke-dashoffset: 0.1;
+  transition: all .1s ease-in-out;
+}
+
+.hand{
+  stroke: var(--hour-minute);
+  stroke-width: 2;
+  stroke-linecap: circle;
+  transition: all .5s ease-in-out;
+}
+
+.hand--thick{
+  stroke-width: 5;
+  transition: all .5s ease-in-out;
+}
+
+.hand--second{
+  stroke: var(--second);
+  transition: all .5s ease-in-out;
+}
+
+.center{
+  fill: var(--innercircle);
+  stroke-width: 2;
+  stroke: var(--outercircle);
+  transition: all .5s ease-in-out;
+}
